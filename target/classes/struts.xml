@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <!-- Development mode for easier debugging -->
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    
+    <!-- Package configuration -->
+    <package name="student" namespace="/" extends="struts-default">
+        
+        <!-- Global results -->
+        <global-results>
+            <result name="error">/error.jsp</result>
+            <result name="input">/assignment-form.jsp</result>
+        </global-results>
+        
+        <!-- Global exception mappings -->
+        <global-exception-mappings>
+            <exception-mapping exception="java.lang.Exception" result="error"/>
+        </global-exception-mappings>
+        
+        <!-- Home action -->
+        <action name="index">
+            <result>/index.jsp</result>
+        </action>
+        
+        <!-- Assignment form actions -->
+        <action name="assignment-form" class="com.university.struts.controller.AssignmentAction" method="showForm">
+            <result name="success">/assignment-form.jsp</result>
+            <result name="input">/assignment-form.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+        
+        <action name="submit-assignment" class="com.university.struts.controller.AssignmentAction">
+            <result name="success">/success.jsp</result>
+            <result name="input">/assignment-form.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+        
+        <!-- View all submitted assignments -->
+        <action name="view-assignments" class="com.university.struts.controller.ViewAssignmentsAction">
+            <result name="success">/view-assignments.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+        
+    </package>
+</struts>
