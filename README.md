@@ -260,7 +260,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-Project Maintainer: [Karthik Sai Ambati]  
+Project Maintainer: Karthik Sai Ambati  
 Email: [aksai0511@gmail.com](mailto:aksai0511@gmail.com)  
 GitHub: [@karthiksai2000](https://github.com/karthiksai2000)
 
